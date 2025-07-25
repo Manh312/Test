@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Search } from "lucide-react"; // icon đẹp hơn
+import { Link } from "react-router-dom";
 
 const SearchFeature = () => {
   const [searchTerm, setSearchTerm] = useState("");
@@ -21,7 +22,10 @@ const SearchFeature = () => {
   return (
     <div className="min-h-screen flex items-center justify-center">
       <div className="bg-white p-6 rounded-2xl shadow-xl w-full max-w-md space-y-4">
-        <h1 className="text-2xl font-semibold text-center text-gray-800">Search Feature</h1>
+        <Link to="/">
+          <button className="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded cursor-pointer">Back</button>
+        </Link>
+        <h1 className="text-2xl font-semibold text-center text-gray-800 mt-5">Search Feature</h1>
 
         <div className="relative">
           <Search className="absolute left-3 top-2.5 text-gray-400" size={20} />

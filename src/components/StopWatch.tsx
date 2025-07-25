@@ -1,4 +1,5 @@
 import { useState, useRef, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 const STORAGE_KEY = "stopwatch";
 
@@ -114,7 +115,10 @@ const Stopwatch = () => {
 
   return (
     <div className="bg-white p-6 rounded-2xl shadow-md w-80 text-center space-y-4">
-      <h1 className="text-2xl font-semibold">⏱ Stopwatch</h1>
+        <Link to="/">
+          <button className="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded float-left cursor-pointer">Back</button>
+        </Link>
+      <h1 className="text-2xl font-semibold mt-10">Stopwatch</h1>
       <div className="text-4xl font-mono">{seconds}s</div>
       <div className="flex justify-center gap-2">
         <button
